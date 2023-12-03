@@ -38,7 +38,7 @@ RenderSettings:
   m_ReflectionIntensity: 1
   m_CustomReflection: {fileID: 0}
   m_Sun: {fileID: 0}
-  m_IndirectSpecularColor: {r: 5154.485, g: 7747.036, b: 7962.993, a: 1}
+  m_IndirectSpecularColor: {r: 5764.1294, g: 8297.11, b: 8270.493, a: 1}
   m_UseRadianceAmbientProbe: 0
 --- !u!157 &3
 LightmapSettings:
@@ -128,8 +128,8 @@ GameObject:
   serializedVersion: 6
   m_Component:
   - component: {fileID: 866413723}
-  - component: {fileID: 866413722}
   - component: {fileID: 866413721}
+  - component: {fileID: 866413724}
   m_Layer: 0
   m_Name: Pool
   m_TagString: Untagged
@@ -158,7 +158,22 @@ BoxCollider:
   serializedVersion: 3
   m_Size: {x: 1, y: 5, z: 1}
   m_Center: {x: 0, y: -2, z: 0}
---- !u!114 &866413722
+--- !u!4 &866413723
+Transform:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 866413720}
+  serializedVersion: 2
+  m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
+  m_LocalPosition: {x: 33.454765, y: 18.82362, z: -39.510883}
+  m_LocalScale: {x: 10, y: 1, z: 10}
+  m_ConstrainProportionsScale: 0
+  m_Children: []
+  m_Father: {fileID: 0}
+  m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
+--- !u!114 &866413724
 MonoBehaviour:
   m_ObjectHideFlags: 0
   m_CorrespondingSourceObject: {fileID: 0}
@@ -176,85 +191,86 @@ MonoBehaviour:
   largeBand0FadeToggle: 1
   largeBand1FadeToggle: 1
   ripplesFadeToggle: 1
-  surfaceType: 2
+  surfaceType: 0
   geometryType: 0
-  meshRenderers: []
-  timeMultiplier: 0.8
-  cpuSimulation: 0
+  meshRenderers:
+  - {fileID: 0}
+  timeMultiplier: 1
+  cpuSimulation: 1
   cpuLowLatency: 0
   cpuFullResolution: 0
   cpuEvaluateRipples: 0
-  customMaterial: {fileID: 0}
+  customMaterial: {fileID: 2100000, guid: 8ffe55eafff896b439db9f8dbf8ddde6, type: 2}
   startSmoothness: 0.95
   endSmoothness: 0.85
   smoothnessFadeStart: 100
   smoothnessFadeDistance: 500
-  tessellation: 0
+  tessellation: 1
   maxTessellationFactor: 3
   tessellationFactorFadeStart: 150
   tessellationFactorFadeRange: 1850
-  refractionColor: {r: 0, g: 0.6677344, b: 1, a: 1}
-  maxRefractionDistance: 0.35
-  absorptionDistance: 5
-  scatteringColor: {r: 0, g: 0.93035007, b: 1, a: 1}
-  ambientScattering: 0.6
-  heightScattering: 0
-  displacementScattering: 0
-  directLightTipScattering: 0.2
-  directLightBodyScattering: 0.2
-  maximumHeightOverride: 0
+  refractionColor: {r: 0, g: 0.74715114, b: 0.8387991, a: 1}
+  maxRefractionDistance: 2
+  absorptionDistance: 3
+  scatteringColor: {r: 0, g: 0.13286825, b: 0.17064494, a: 1}
+  ambientScattering: 0.7
+  heightScattering: 0.2
+  displacementScattering: 0.1
+  directLightTipScattering: 0.6
+  directLightBodyScattering: 0.6
+  maximumHeightOverride: 5
   caustics: 1
   causticsIntensity: 0.5
   causticsPlaneBlendDistance: 2
-  causticsResolution: 1024
+  causticsResolution: 512
   causticsBand: 2
-  virtualPlaneDistance: 4
+  virtualPlaneDistance: 3
   causticsTilingFactor: 1
-  causticsDirectionalShadow: 0
-  causticsDirectionalShadowDimmer: 0.25
-  renderingLayerMask: 257
+  causticsDirectionalShadow: 1
+  causticsDirectionalShadowDimmer: 0.2
+  renderingLayerMask: 512
   debugMode: 0
   waterMaskDebugMode: 0
   waterCurrentDebugMode: 0
-  currentDebugMultiplier: 1
+  currentDebugMultiplier: 2
   waterFoamDebugMode: 0
   underWater: 1
-  volumeBounds: {fileID: 866413721}
+  volumeBounds: {fileID: 0}
   volumeDepth: 50
-  volumeHeight: 0
+  volumeHeight: 5
   volumePrority: 0
-  absorptionDistanceMultiplier: 1
+  absorptionDistanceMultiplier: 4
   colorPyramidOffset: 1
   underWaterAmbientProbeContribution: 1
-  underWaterScatteringColorMode: 0
-  underWaterScatteringColor: {r: 0, g: 0.27, b: 0.23, a: 1}
+  underWaterScatteringColorMode: 1
+  underWaterScatteringColor: {r: 0, g: 0.26999992, b: 0.2299999, a: 1}
   underWaterRefraction: 0
-  largeCurrentSpeedValue: 0
-  largeCurrentMap: {fileID: 0}
-  largeCurrentRegionExtent: {x: 100, y: 100}
+  largeCurrentSpeedValue: 3
+  largeCurrentMap: {fileID: 2800000, guid: 4636f7c29b8d72a4f93c6dd7c2979df3, type: 3}
+  largeCurrentRegionExtent: {x: 200, y: 64}
   largeCurrentRegionOffset: {x: 0, y: 0}
   largeCurrentMapInfluence: 1
   ripplesCurrentSpeedValue: 0
-  ripplesCurrentMap: {fileID: 0}
-  ripplesCurrentRegionExtent: {x: 100, y: 100}
+  ripplesCurrentMap: {fileID: 2800000, guid: efe0a53d680cc1a44a3932ddb563054f, type: 3}
+  ripplesCurrentRegionExtent: {x: 200, y: 64}
   ripplesCurrentRegionOffset: {x: 0, y: 0}
   ripplesCurrentMapInfluence: 1
   deformation: 1
   deformationRes: 512
-  deformationAreaSize: {x: 200, y: 200}
-  deformationAreaOffset: {x: 0, y: 0}
-  foam: 0
+  deformationAreaSize: {x: 270, y: 128}
+  deformationAreaOffset: {x: -50, y: -10}
+  foam: 1
   foamResolution: 512
-  foamAreaSize: {x: 200, y: 200}
-  foamAreaOffset: {x: 0, y: 0}
+  foamAreaSize: {x: 300, y: 256}
+  foamAreaOffset: {x: -64, y: 0}
   foamPersistenceMultiplier: 0.5
   foamColor: {r: 1, g: 1, b: 1, a: 1}
-  foamTextureTiling: 0.2
+  foamTextureTiling: 0.1
   foamSmoothness: 0.3
   simulationFoam: 1
-  simulationFoamAmount: 0.3
-  simulationFoamMask: {fileID: 0}
-  simulationFoamMaskExtent: {x: 100, y: 100}
+  simulationFoamAmount: 0.7
+  simulationFoamMask: {fileID: 2800000, guid: 79be5d2ed3f9b7a49b34f77f8b94b558, type: 3}
+  simulationFoamMaskExtent: {x: 150, y: 120}
   simulationFoamMaskOffset: {x: 0, y: 0}
   simulationFoamWindCurve:
     serializedVersion: 2
@@ -262,81 +278,57 @@ MonoBehaviour:
     - serializedVersion: 3
       time: 0
       value: 0
-      inSlope: 0
-      outSlope: 0
-      tangentMode: 0
+      inSlope: 10
+      outSlope: 10
+      tangentMode: 34
       weightedMode: 0
       inWeight: 0
-      outWeight: 0
+      outWeight: 0.33333334
     - serializedVersion: 3
-      time: 0.2
-      value: 0
-      inSlope: 0
-      outSlope: 0
-      tangentMode: 0
-      weightedMode: 0
-      inWeight: 0
-      outWeight: 0
-    - serializedVersion: 3
-      time: 0.3
+      time: 0.1
       value: 1
       inSlope: 0
       outSlope: 0
       tangentMode: 0
       weightedMode: 0
-      inWeight: 0
-      outWeight: 0
+      inWeight: 0.33333334
+      outWeight: 0.11977959
     - serializedVersion: 3
       time: 1
       value: 1
       inSlope: 0
       outSlope: 0
-      tangentMode: 0
+      tangentMode: 34
       weightedMode: 0
-      inWeight: 0
+      inWeight: 0.33333334
       outWeight: 0
     m_PreInfinity: 2
     m_PostInfinity: 2
     m_RotationOrder: 4
-  repetitionSize: 500
-  largeOrientationValue: 0
-  largeWindSpeed: 30
-  largeChaos: 0.8
-  largeBand0Multiplier: 1
+  repetitionSize: 250
+  largeOrientationValue: 180
+  largeWindSpeed: 20
+  largeChaos: 0.33
+  largeBand0Multiplier: 0.75
   largeBand0FadeMode: 1
-  largeBand0FadeStart: 1500
-  largeBand0FadeDistance: 3000
-  largeBand1Multiplier: 1
+  largeBand0FadeStart: 150
+  largeBand0FadeDistance: 300
+  largeBand1Multiplier: 0.8
   largeBand1FadeMode: 1
   largeBand1FadeStart: 300
   largeBand1FadeDistance: 800
   ripples: 1
-  ripplesMotionMode: 0
-  ripplesOrientationValue: 0
-  ripplesWindSpeed: 5
-  ripplesChaos: 1
+  ripplesMotionMode: 1
+  ripplesOrientationValue: 180
+  ripplesWindSpeed: 8
+  ripplesChaos: 0.33
   ripplesFadeMode: 1
   ripplesFadeStart: 50
   ripplesFadeDistance: 200
-  waterMask: {fileID: 2800000, guid: 7f9393304aedcc24c8d1500044e87418, type: 3}
-  waterMaskRemap: {x: 0, y: 1}
-  waterMaskExtent: {x: 10, y: 10}
+  waterMask: {fileID: 2800000, guid: 6bd96986519b61d41b02322773f5a9ab, type: 3}
+  waterMaskRemap: {x: 0.48449892, y: 0.8018144}
+  waterMaskExtent: {x: 150, y: 120}
   waterMaskOffset: {x: 0, y: 0}
---- !u!4 &866413723
-Transform:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 866413720}
-  serializedVersion: 2
-  m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
-  m_LocalPosition: {x: 33.454765, y: 18.82362, z: -39.510883}
-  m_LocalScale: {x: 10, y: 1, z: 10}
-  m_ConstrainProportionsScale: 0
-  m_Children: []
-  m_Father: {fileID: 0}
-  m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
 --- !u!1 &1297174928
 GameObject:
   m_ObjectHideFlags: 0
